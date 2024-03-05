@@ -22,7 +22,7 @@ function rebase_atop_of_the_latest_target_branch() {
 }
 
 function main() {
-	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
+	env
 	
     action="${1:-}"
 
