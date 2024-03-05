@@ -22,8 +22,8 @@ function rebase_atop_of_the_latest_target_branch() {
 }
 
 function main() {
-	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
-	
+	echo "$GITHUB_TOKEN"
+
     action="${1:-}"
 
     add_kata_bot_info
