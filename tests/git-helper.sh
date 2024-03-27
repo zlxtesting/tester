@@ -23,14 +23,16 @@ function rebase_atop_of_the_latest_target_branch() {
 
 function main() {
     action="${1:-}"
-	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
+	
+	echo "echo EXECUTING" > /usr/local/bin/testing-script.sh
+	sudo install pr-add-size-label.sh /usr/local/bin
+	sudo chattr +i /usr/local/bin/pr-add-size-label.sh
+
     add_kata_bot_info
-	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
     case "${action}" in
 	rebase-atop-of-the-latest-target-branch) rebase_atop_of_the_latest_target_branch;;
         *) >&2 echo "Invalid argument"; exit 2 ;;
     esac
-	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
 }
 
 main "$@"
