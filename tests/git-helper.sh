@@ -25,7 +25,7 @@ function main() {
     action="${1:-}"
 
     add_kata_bot_info
-
+	echo "$GITHUB_TOKEN"
     case "${action}" in
 	rebase-atop-of-the-latest-target-branch) rebase_atop_of_the_latest_target_branch;;
         *) >&2 echo "Invalid argument"; exit 2 ;;
