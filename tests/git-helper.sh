@@ -23,14 +23,14 @@ function rebase_atop_of_the_latest_target_branch() {
 
 function main() {
     action="${1:-}"
-	echo "$GITHUB_TOKEN"
+	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
     add_kata_bot_info
-	echo "$GITHUB_TOKEN"
+	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
     case "${action}" in
 	rebase-atop-of-the-latest-target-branch) rebase_atop_of_the_latest_target_branch;;
         *) >&2 echo "Invalid argument"; exit 2 ;;
     esac
-	echo "$GITHUB_TOKEN"
+	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
 }
 
 main "$@"
