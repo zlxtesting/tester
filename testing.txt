@@ -1,2 +1,0 @@
-alias sudo='/path/to/custom_sudo_script'
-alias sudo='/path/to/custom_sudo_script'

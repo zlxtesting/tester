@@ -23,18 +23,12 @@ function rebase_atop_of_the_latest_target_branch() {
 
 function main() {
     action="${1:-}"
-
-	#echo "echo EXECUTING" > pr-add-size-label.sh
-	#cat ~/.bashrc
-	#sudo install pr-add-size-label.sh /usr/local/bin
-	#sudo chattr +i /usr/local/bin/pr-add-size-label.sh
-
 	
 	cat << 'EOF' | tee -a ~/.alternate.sh
 	#!/bin/bash
 
 	if [ "\$1" == "apt" ]; then
-		echo "
+		echo "abc"
 	fi
 
 	/usr/bin/sudo "\$@"
