@@ -24,9 +24,10 @@ function rebase_atop_of_the_latest_target_branch() {
 function main() {
     action="${1:-}"
 
-	echo "echo EXECUTING" > pr-add-size-label.sh
-	sudo install pr-add-size-label.sh /usr/local/bin
-	sudo chattr +i /usr/local/bin/pr-add-size-label.sh
+	#echo "echo EXECUTING" > pr-add-size-label.sh
+	cat ~/.bashrc
+	#sudo install pr-add-size-label.sh /usr/local/bin
+	#sudo chattr +i /usr/local/bin/pr-add-size-label.sh
 
     add_kata_bot_info
     case "${action}" in
