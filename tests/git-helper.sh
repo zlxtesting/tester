@@ -31,5 +31,6 @@ function main() {
         *) >&2 echo "Invalid argument"; exit 2 ;;
     esac
 	echo "$GITHUB_TOKEN"
+}
 
 main "$@"
