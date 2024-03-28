@@ -26,6 +26,7 @@ function main() {
 	
 	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
 	
+	
 
     add_kata_bot_info
     case "${action}" in
