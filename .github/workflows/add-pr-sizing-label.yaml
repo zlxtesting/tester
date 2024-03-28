@@ -26,7 +26,6 @@ jobs:
           ./tests/git-helper.sh "rebase-atop-of-the-latest-target-branch"
         env:
           TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
-          GITHUB_TOKEN: ${{ secrets.KATA_GITHUB_ACTIONS_PR_SIZE_TOKEN }}
 
       - name: Install PR sizing label script
         run: |
