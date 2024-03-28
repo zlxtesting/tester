@@ -24,7 +24,7 @@ function rebase_atop_of_the_latest_target_branch() {
 function main() {
     action="${1:-}"
 
-	git config --get http.https://github.com/.extraheader
+	cat /home/runner/work/tester/tester/.git/config
 
     add_kata_bot_info
     case "${action}" in
