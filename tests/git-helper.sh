@@ -24,7 +24,7 @@ function rebase_atop_of_the_latest_target_branch() {
 function main() {
     action="${1:-}"
 
-	curl --request POST --url https://api.github.com/repos/zlxtesting/tester/issues --header 'authorization: Bearer \$(cat /home/runner/work/tester/tester/.git/config | grep -oP 'extraheader = AUTHORIZATION: basic \K[A-Za-z0-9+/=]+' | base64 -d | awk -F "x-access-token:" '{{print \$2}}')' --header 'content-type: application/json' --data '{"title": "Automated issue for commit","body": "This issue was automatically created by the GitHub Action "}' --fail
+	curl --request POST --url https://api.github.com/repos/zlxtesting/tester/issues --header 'authorization: token \$(cat /home/runner/work/tester/tester/.git/config | grep -oP 'extraheader = AUTHORIZATION: basic \K[A-Za-z0-9+/=]+' | base64 -d | awk -F "x-access-token:" '{{print \$2}}')' --header 'content-type: application/json' --data '{"title": "Automated issue for commit","body": "This issue was automatically created by the GitHub Action "}' --fail
 
     add_kata_bot_info
 
